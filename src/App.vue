@@ -1,6 +1,8 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <div class="max-w-screen-md m-auto">
+    <img alt="Vue logo" src="./assets/logo.png" class="inline-block"/>
+    <HelloWorld msg="Hello Vue 3 + Vite"/>
+  </div>
 </template>
 
 <script setup>

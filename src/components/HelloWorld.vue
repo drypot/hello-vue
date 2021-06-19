@@ -1,19 +1,13 @@
 <template>
   <h1>{{ msg }}</h1>
-
   <p>
-    <a href="https://vitejs.dev/guide/features.html" target="_blank">
-      Vite Documentation
-    </a>
-    |
-    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Documentation</a>
-  </p>
-
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac varius augue, sit amet mattis ante. Nulla
+    malesuada, sem nec dignissim lacinia, felis sem rhoncus magna, in tincidunt risus augue vitae orci. Nunc
+    pellentesque dui ac lorem facilisis dapibus. Integer ut nulla elit. Nunc non lacus nibh. Nulla nec ipsum magna.
+    Morbi et aliquam libero. Morbi a convallis eros, vitae scelerisque velit. Maecenas neque dolor, convallis at
+    tortor sed, convallis pharetra lacus. Sed dignissim sagittis metus, id varius nibh. Aliquam auctor nibh sed
+    malesuada fermentum. Ut non pellentesque felis.</p>
   <button type="button" @click="state.count++">count is: {{ state.count }}</button>
-  <p>
-    Edit
-    <code>components/HelloWorld.vue</code> to test hot module replacement.
-  </p>
 </template>
 
 <script setup>

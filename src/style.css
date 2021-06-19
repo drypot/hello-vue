@@ -1,0 +1,14 @@
+
+#app {
+}
+
+@layer base {
+}
+
+@layer components {
+}
+
+@layer utilities {
+  @variants responsive {
+  }
+}
