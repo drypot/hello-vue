@@ -1,12 +1,13 @@
 <template>
   <div class="max-w-screen-md m-auto">
-    <img alt="Vue logo" src="./assets/logo.png" class="inline-block"/>
+    <Header></Header>
     <HelloWorld msg="Hello Vue 3 + Vite"/>
   </div>
 </template>
 
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './Header.vue';
+import HelloWorld from './HelloWorld.vue'
 
 // This starter template is using Vue 3 experimental <script setup> SFCs
 // Check out https://github.com/vuejs/rfcs/blob/script-setup-2/active-rfcs/0000-script-setup.md
