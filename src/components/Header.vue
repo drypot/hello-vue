@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="mb-8">
     <Logo></Logo>
   </header>
 </template>

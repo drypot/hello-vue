@@ -7,13 +7,9 @@
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <section class="m-8">
+  <section class="m-8 space-y-4">
     <h1 class="font-serif text-4xl mb-4">Hello Vue.js</h1>
-    <p class="font-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac varius augue, sit amet mattis ante. Nulla
-      malesuada, sem nec dignissim lacinia, felis sem rhoncus magna, in tincidunt risus augue vitae orci. Nunc
-      pellentesque dui ac lorem facilisis dapibus.</p>
-  </section>
-  <section class="m-8">
+
     <div id="simpleEx" class="border rounded p-4">
       <ul>
         <li>Message: {{ message }}</li>
@@ -37,8 +33,7 @@
         }
       }).mount("#simpleEx");
     </script>
-  </section>
-  <section class="m-8">
+
     <div id="onClickEx" class="border rounded p-4">
       <p>{{ message }}</p>
       <button v-on:click="reverseMessage" class="btn">Reverse</button>
@@ -57,8 +52,7 @@
         }
       }).mount('#onClickEx');
     </script>
-  </section>
-  <section class="m-8">
+
     <div id="vModelEx" class="border rounded p-4">
       <p>{{ message }}</p>
       <input v-model="message" class="input"/>
@@ -72,8 +66,7 @@
         }
       }).mount('#vModelEx');
     </script>
-  </section>
-  <section class="m-8">
+
     <div id="conditionalEx" class="border rounded p-4">
       <div v-if="seen">Now you see me</div>
       <button v-on:click="toggle" class="btn">Toggle</button>
@@ -92,8 +85,7 @@
         }
       }).mount('#conditionalEx');
     </script>
-  </section>
-  <section class="m-8">
+
     <div id="forEx" class="border rounded p-4">
       <ol>
         <li v-for="todo in todos">{{ todo.text }}</li>
@@ -112,10 +104,10 @@
         }
       }).mount('#forEx');
     </script>
-  </section>
-  <section class="m-8">
+
     <div id="moreEx" class="border rounded p-4">
     </div>
+
   </section>
 </body>
 </html>
