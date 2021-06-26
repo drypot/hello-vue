@@ -10,6 +10,10 @@
   <section class="m-8 space-y-4">
     <h1 class="font-serif text-4xl mb-4">Hello Vue.js</h1>
 
+    <script>
+      const { defineComponent, createApp } = Vue;
+    </script>
+
     <div id="simpleEx" class="border rounded p-4">
       <ul>
         <li>Message: {{ message }}</li>
@@ -18,7 +22,7 @@
       </ul>
     </div>
     <script>
-      Vue.createApp({
+      createApp({
         data() {
           return {
             message: "Hello from App Object",
@@ -39,7 +43,7 @@
       <button v-on:click="reverseMessage" class="btn">Reverse</button>
     </div>
     <script>
-      Vue.createApp({
+      createApp({
         data() {
           return {
             message: 'abcd 1234'
@@ -58,7 +62,7 @@
       <input v-model="message" class="input"/>
     </div>
     <script>
-      Vue.createApp({
+      createApp({
         data() {
           return {
             message: 'Linked with input form'
@@ -72,7 +76,7 @@
       <button v-on:click="toggle" class="btn">Toggle</button>
     </div>
     <script>
-      Vue.createApp({
+      createApp({
         data() {
           return {
             seen: true
@@ -92,7 +96,7 @@
       </ol>
     </div>
     <script>
-      Vue.createApp({
+      createApp({
         data() {
           return {
             todos: [
