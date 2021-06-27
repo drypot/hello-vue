@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello Vue.js</title>
+  <script src="https://unpkg.com/vue@next"></script>
+  <link rel="stylesheet" href="/tailwind.css">
+  <link rel="stylesheet" href="/base.css">
+</head>
+<body>
+  <div class="page">
+
+    <h1 class="page-title">Hello Vue.js</h1>
+
+    <div id="app" class="rounded-section space-y-2">
+      <div>Counter: {{ counter }}</div>
+      <div><button @click="stop" class="btn">stop</button></div>
+    </div>
+
+    <script>
+      const { createApp } = Vue;
+      const app = createApp({
+        data() {
+          return {
+            counter: 0,
+            timer: null
+          }
+        },
+        mounted() {
+          this.timer = setInterval(() => {
+            this.counter++;
+          }, 1000);
+        },
+        methods: {
+          stop() {
+            clearInterval(this.timer);
+          }
+        }
+      });
+      app.mount('#app');
+    </script>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello Vue.js</title>
+  <script src="https://unpkg.com/vue@next"></script>
+  <link rel="stylesheet" href="/tailwind.css">
+  <link rel="stylesheet" href="/base.css">
+</head>
+<body>
+  <div class="page">
+
+    <h1 class="page-title">Hello Vue.js</h1>
+
+    <div id="app" class="rounded-section space-y-2">
+      <p>{{ message }}</p>
+      <button @click="reverseMessage" class="btn">Reverse</button>
+    </div>
+
+    <script>
+      const { createApp } = Vue;
+      const app= createApp({
+        data() {
+          return {
+            message: 'abcd 1234'
+          }
+        },
+        methods: {
+          reverseMessage() {
+            this.message = this.message.split('').reverse().join('');
+          }
+        }
+      });
+      app.mount('#app');
+    </script>
+
+  </div>
+</body>
+</html>

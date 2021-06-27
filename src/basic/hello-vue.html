@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello Vue.js</title>
+  <script src="https://unpkg.com/vue@next"></script>
+  <link rel="stylesheet" href="/tailwind.css">
+  <link rel="stylesheet" href="/base.css">
+</head>
+<body>
+  <div class="page">
+
+    <h1 class="page-title">Hello Vue.js</h1>
+
+    <div id="app" class="rounded-section">
+      {{ message }}
+    </div>
+
+    <script>
+      const { createApp } = Vue;
+      const app = createApp({
+        data() {
+          return {
+            message: 'Hello Vue!!'
+          }
+        }
+      });
+      app.mount('#app');
+    </script>
+
+  </div>
+</body>
+</html>
