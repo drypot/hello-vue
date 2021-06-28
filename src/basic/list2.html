@@ -12,22 +12,31 @@
     <h1 class="page-title">Hello Vue.js</h1>
 
     <div id="app" class="rounded-section space-y-2">
-      <p>{{ message }}</p>
-      <button @click="reverseMessage" class="btn">Reverse</button>
+      <ol>
+        <todo-item
+          v-for="item in groceryList"
+          :todo="item"
+          :key="item.id"
+        ></todo-item>
+      </ol>
     </div>
 
     <script>
       const app = Vue.createApp({
         data() {
           return {
-            message: 'abcd 1234'
-          }
-        },
-        methods: {
-          reverseMessage() {
-            this.message = this.message.split('').reverse().join('')
+            groceryList: [
+              { id: 0, text: 'Vegetables' },
+              { id: 1, text: 'Cheese' },
+              { id: 2, text: 'Whatever else humans are supposed to eat' }
+            ]
           }
         }
+      })
+      app.component('todo-item', {
+        props: ['todo'],
+        template: `
+          <li>{{ todo.text }}</li>`
       })
       app.mount('#app')
     </script>

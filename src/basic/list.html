@@ -19,7 +19,7 @@
       </ol>
       <ol>
         <li v-for="(value, name, index) in myObject" :key="name">
-          {{index}} - {{ name }} : {{ value }}
+          {{ index }} - {{ name }} : {{ value }}
         </li>
       </ol>
     </div>
@@ -40,8 +40,8 @@
             }
           }
         }
-      });
-      app.mount('#app');
+      })
+      app.mount('#app')
     </script>
 
   </div>
