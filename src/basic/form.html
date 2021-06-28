@@ -14,13 +14,16 @@
     <div id="app" class="rounded-section space-y-2">
       <p>{{ message }}</p>
       <input v-model="message" class="input"/>
+      <p>{{ message2 }}</p>
+      <input :value="message2" @input="message2 = $event.target.value" class="input"/>
     </div>
 
     <script>
       const app = Vue.createApp({
         data() {
           return {
-            message: 'Hello Vue!'
+            message: 'Hello',
+            message2: ' Vue!'
           }
         }
       });
