@@ -12,23 +12,22 @@
     <h1 class="page-title">Hello Vue.js</h1>
 
     <div id="app" class="rounded-section space-y-2">
-      <ol>
-        <li v-for="todo in todos">
-          {{ todo.text }}
-        </li>
-      </ol>
+      <p>FullName: {{ fullName }}</p>
+      <input v-model="firstName" class="input"/><br>
+      <input v-model="lastName" class="input"/>
     </div>
 
     <script>
-      const { createApp } = Vue;
-      const app = createApp({
+      const app = Vue.createApp({
         data() {
           return {
-            todos: [
-              { text: 'Learn JavaScript' },
-              { text: 'Learn Vue' },
-              { text: 'Build something awesome' }
-            ]
+            firstName: 'Foo',
+            lastName: 'Bar'
+          }
+        },
+        computed: {
+          fullName() {
+            return this.firstName + ' ' + this.lastName
           }
         }
       });

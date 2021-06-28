@@ -12,13 +12,14 @@
     <h1 class="page-title">Hello Vue.js</h1>
 
     <div id="app" class="rounded-section space-y-2">
-      <p v-if="seen">Now you see me</p>
+      <p v-if="true">v-if true.</p>
+      <p v-else>else.</p>
+      <p v-show="seen">Now you see me</p>
       <button @click="toggle" class="btn">Toggle</button>
     </div>
 
     <script>
-      const { createApp } = Vue;
-      const app = createApp({
+      const app = Vue.createApp({
         data() {
           return {
             seen: true

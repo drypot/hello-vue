@@ -12,18 +12,22 @@
     <h1 class="page-title">Hello Vue.js</h1>
 
     <div id="app" class="rounded-section">
-      <span :title="message">
-        Hover your mouse over me for a few seconds to see my dynamically bound
-        title!
-      </span>
+      <div
+        class="font-bold"
+        :class="{ 'bg-yellow-300': true, 'text-red-600': false }">
+        What is essential is invisible to the eye.
+      </div>
+      <div
+        class="font-bold"
+        :class="[ 'bg-green-400', 'text-white' ]">
+        It is only with the heart that one can see rightly.
+      </div>
     </div>
 
     <script>
       const app = Vue.createApp({
         data() {
-          return {
-            message: 'You loaded this page on ' + new Date().toLocaleString()
-          }
+          return {}
         }
       })
       app.mount('#app')

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello Vue.js</title>
+  <script src="https://unpkg.com/vue@next"></script>
+  <link rel="stylesheet" href="/tailwind.css">
+  <link rel="stylesheet" href="/base.css">
+</head>
+<body>
+  <div class="page">
+
+    <h1 class="page-title">Hello Vue.js</h1>
+
+    <div id="app" class="rounded-section space-y-2">
+      <ol>
+        <li v-for="(item, index) in myList">
+          {{ index }} - {{ item.text }}
+        </li>
+      </ol>
+      <ol>
+        <li v-for="(value, name, index) in myObject" :key="name">
+          {{index}} - {{ name }} : {{ value }}
+        </li>
+      </ol>
+    </div>
+
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            myList: [
+              { text: 'Learn JavaScript' },
+              { text: 'Learn Vue' },
+              { text: 'Build something awesome' }
+            ],
+            myObject: {
+              title: 'How to do lists in Vue',
+              author: 'Jane Doe',
+              publishedAt: '2016-04-10'
+            }
+          }
+        }
+      });
+      app.mount('#app');
+    </script>
+
+  </div>
+</body>
+</html>

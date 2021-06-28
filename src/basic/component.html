@@ -12,33 +12,25 @@
     <h1 class="page-title">Hello Vue.js</h1>
 
     <div id="app" class="rounded-section space-y-2">
-      <ol>
-        <todo-item
-          v-for="item in groceryList"
-          :todo="item"
-          :key="item.id"
-        ></todo-item>
-      </ol>
+      <button-counter class="block"></button-counter>
+      <button-counter class="block"></button-counter>
+      <button-counter class="block"></button-counter>
     </div>
 
     <script>
-      const { createApp } = Vue;
-      const app = createApp({
+      const app = Vue.createApp({})
+      app.component('button-counter', {
         data() {
           return {
-            groceryList: [
-              { id: 0, text: 'Vegetables' },
-              { id: 1, text: 'Cheese' },
-              { id: 2, text: 'Whatever else humans are supposed to eat' }
-            ]
+            count: 0
           }
-        }
-      });
-      app.component('todo-item', {
-        props: ['todo'],
-        template: `<li>{{ todo.text }}</li>`
-      });
-      app.mount('#app');
+        },
+        template: `
+          <button @click="count++" class="btn">
+          You clicked me {{ count }} times.
+          </button>`
+      })
+      app.mount('#app')
     </script>
 
   </div>
