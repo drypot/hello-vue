@@ -9,17 +9,16 @@
 <body>
   <div class="page">
 
-    <h1 class="page-title">Hello Vue.js</h1>
+    <h1>Hello Vue.js</h1>
 
     <div id="app" class="rounded-section">
-      <div :style="{ fontSize: postFontSize + 'em' }" class=" space-y-2">
         <blog-post
           v-for="post in posts"
           :key="post.id"
           :title="post.title"
+          :style="{ fontSize: postFontSize + 'em' }"
           @enlarge-text="postFontSize += 0.1"
         ></blog-post>
-      </div>
     </div>
 
     <script type="text/x-template" id="blog-post-template">
