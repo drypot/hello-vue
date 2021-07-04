@@ -3,6 +3,20 @@
   html {
     font-size: 20px;
     @apply font-serif;
+    @apply text-gray-900;
+  }
+
+  .m-default {
+    margin-top: 1em;
+  }
+
+  .m-default > *:first-child {
+    margin-top: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6, p, ol, ul,
+  section, article, header, footer {
+    @apply m-default;
   }
 
   h1 {
@@ -25,21 +39,12 @@
     @apply text-blue-600 underline;
   }
 
-  #app {
-  }
-
   .page {
-    @apply max-w-screen-md mx-auto mt-8;
-    @apply flex flex-col gap-6;
-    @apply text-gray-900;
-  }
-
-  .default-flow {
-    @apply flex flex-col gap-3 items-start
+    @apply max-w-screen-md mx-auto;
   }
 
   .rounded-section {
-    @apply default-flow;
+    @apply m-default;
     @apply border rounded p-4;
   }
 
@@ -69,4 +74,3 @@
   }
 
 }
-

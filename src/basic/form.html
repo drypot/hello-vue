@@ -13,9 +13,9 @@
 
     <div id="app" class="rounded-section">
       <p>{{ message }}</p>
-      <input v-model="message" class="input"/>
+      <p><input v-model="message" class="input"/></p>
       <p>{{ message2 }}</p>
-      <input :value="message2" @input="message2 = $event.target.value" class="input"/>
+      <p><input :value="message2" @input="message2 = $event.target.value" class="input"/></p>
     </div>
 
     <script>
